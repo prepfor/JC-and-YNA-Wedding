@@ -146,7 +146,7 @@
   <source src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/Imagine%20Goodness%20Of%20God%20X%20Oceans%20as%20a%20wedding%20entrance.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
-  </body>
+
   
   <!-- Meet the Couple Section -->
 <section id="couple" style="background-color: var(--beige); color: var(--black); text-align: center;">
@@ -229,5 +229,17 @@
   <footer>
     <p>&copy; 2025 JC & Yna. All rights reserved.</p>
   </footer>
+
+  <!-- ✅ Script to unmute on click -->
+  <script>
+    window.addEventListener('click', function () {
+      const audio = document.getElementById('bg-music');
+      audio.muted = false;
+      audio.play().catch(e => {
+        console.log('Audio playback failed:', e);
+      });
+    }, { once: true });
+  </script>
 </body>
 </html>
+
