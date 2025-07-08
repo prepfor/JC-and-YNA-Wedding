@@ -146,9 +146,15 @@
     <source src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/Canon%20in%20D%20-%20Pachelbel%20violin%20cover%20%5BBEST%20WEDDING%20VERSION%5D.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
-  <button onclick="document.getElementById('weddingAudio').play()" style="position: fixed; top: 1rem; right: 1rem; z-index: 1000; background-color: #f4dfca; color: #241c1a; padding: 0.5rem 1rem; border: none; border-radius: 8px; cursor: pointer;">
-  Play Music 🎵
-</button>
+  <!-- Music Controls -->
+<div style="position: fixed; top: 1rem; right: 1rem; z-index: 1000; display: flex; gap: 0.5rem;">
+  <button onclick="document.getElementById('weddingAudio').play()" style="background-color: #f4dfca; color: #241c1a; padding: 0.5rem 1rem; border: none; border-radius: 8px; cursor: pointer;">
+    ▶️ Play Music
+  </button>
+  <button onclick="document.getElementById('weddingAudio').pause()" style="background-color: #f4dfca; color: #241c1a; padding: 0.5rem 1rem; border: none; border-radius: 8px; cursor: pointer;">
+    ⏸️ Pause Music
+  </button>
+</div>
   
   <!-- Meet the Couple Section -->
 <section id="couple" style="background-color: var(--beige); color: var(--black); text-align: center;">
