@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JC & Yna's Wedding</title>
   <style>
+    .play-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  background-color: #b0e0e6;
+  color: #241c1a;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1001;
+}
+.play-btn:hover {
+  background-color: #a0d0d6;
+}
     :root {
       --pantone-652: #6d87a8;
       --black: #241c1a;
@@ -13,7 +30,6 @@
       --powder-blue: #b0e0e6;
       --desaturated-blue: #7ca8b8;
       --shadow-blue: #778ba5;
-      --pantone-2149u: #6488a9;
     }
 
     * {
@@ -21,10 +37,11 @@
       margin: 0;
       padding: 0;
     }
-
+    
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: var(--pantone-652);
+      background: url('https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/beach-wedding-setup-stockcake.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: var(--black);
       scroll-behavior: smooth;
     }
@@ -137,9 +154,32 @@
     <p>JC & Yna are getting married — and you're invited!</p>
   </div>
 
+   <!-- ✅ Background Music -->
+  <audio id="bg-music" autoplay loop muted>
+    <source src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/wedding-music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <!-- 🔊 Toggle Play/Pause Button -->
+<button class="play-btn" id="music-toggle" onclick="toggleMusic()">Play Music 🎵</button>
+  
+  <!-- Meet the Couple Section -->
+<section id="couple" style="background-color: var(--beige); color: var(--black); text-align: center;">
+  <h2>Meet the Couple</h2>
+  <img 
+  src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/134101849_167962718417479_8969322493001541384_n.jpg"
+  alt="JC and Yna" 
+  style="max-width: 100%; max-height: 600px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.2); margin-top: 1.5rem;" 
+/>
+  <p style="margin-top: 1.5rem; font-size: 1.1rem;">
+    JC & Yna are thrilled to celebrate their love story with the people who matter most. <br>
+    Thank you for being part of our journey.
+  </p>
+</section>
+  
   <!-- Wedding Details Section -->
-  <section id="details" style="background-color: var(--pantone-652); color: var(--black);">
-    <h2>Date & Location</h2>
+  <section id="details" style="background-color: var(--beige); color: var(--black);">
+    <h2>Wedding Details</h2>
     <div class="details">
       <p><strong>Date:</strong> November 2026 (Tentative)</p>
       <p><strong>Location:</strong> Haya Nature Resort, Botolan Zambales</p>
@@ -161,30 +201,30 @@
       </a></div>
 
     <!-- Embedded RSVP Form -->
-    <form style="margin-top: 2rem; text-align: center;">
-      <div style="margin-bottom: 1rem;">
-        <label for="name">Name:</label><br />
-        <input type="text" id="name" name="name" required style="padding: 0.5rem; width: 80%; max-width: 400px; border-radius: 5px; border: 1px solid #ccc;" />
-      </div>
-      <div style="margin-bottom: 1rem;">
-        <label for="email">Email:</label><br />
-        <input type="email" id="email" name="email" required style="padding: 0.5rem; width: 80%; max-width: 400px; border-radius: 5px; border: 1px solid #ccc;" />
-      </div>
-      <div style="margin-bottom: 1rem;">
-        <label for="attending">Will you be attending?</label><br />
-        <select id="attending" name="attending" required style="padding: 0.5rem; width: 80%; max-width: 400px; border-radius: 5px; border: 1px solid #ccc;">
-          <option value="">Select one</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-          <option value="Maybe">Maybe</option>
-        </select>
-      </div>
-      <button type="submit" style="background-color: var(--pantone-2149u); color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">Submit RSVP</button>
-    </form>
+ <form action="https://formspree.io/f/mjkrqelw" method="POST" style="margin-top: 2rem; text-align: center;">
+  <div style="margin-bottom: 1rem;">
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" name="name" required style="padding: 0.5rem; width: 80%; max-width: 400px; border-radius: 5px; border: 1px solid #ccc;" />
+  </div>
+  <div style="margin-bottom: 1rem;">
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required style="padding: 0.5rem; width: 80%; max-width: 400px; border-radius: 5px; border: 1px solid #ccc;" />
+  </div>
+  <div style="margin-bottom: 1rem;">
+    <label for="attending">Will you be attending?</label><br />
+    <select id="attending" name="attending" required style="padding: 0.5rem; width: 80%; max-width: 400px; border-radius: 5px; border: 1px solid #ccc;">
+      <option value="">Select one</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+      <option value="Maybe">Maybe</option>
+    </select>
+  </div>
+  <button type="submit" style="background-color: var(--pantone-2149u); color: black; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">Submit RSVP</button>
+</form>
     <div style="text-align:center; margin-top: 2rem;">
     </div>
     <p style="margin-top: 2rem;">You can also contact us via email:<br>
-    <a href="mailto:jcandyna2026@gmail.com">jcandyna2026@gmail.com</a></p>
+    <a href="mailto:jcandyna2026@gmail.com">ynaprep4wedding@gmail.com</a></p>
   </div>
 </section>
 
@@ -198,12 +238,28 @@
     <div class="color" style="background-color: var(--powder-blue); color: black;">Powder</div>
     <div class="color" style="background-color: var(--desaturated-blue);">Muted</div>
     <div class="color" style="background-color: var(--shadow-blue);">Shadow</div>
-    <div class="color" style="background-color: var(--pantone-2149u);">2149U</div>
   </div>
 </section>
 
   <footer>
     <p>&copy; 2025 JC & Yna. All rights reserved.</p>
   </footer>
+
+  <!-- ✅ Script to unmute on click -->
+  <script>
+  function toggleMusic() {
+    const audio = document.getElementById('bg-music');
+    const button = document.getElementById('music-toggle');
+
+    if (audio.paused || audio.muted) {
+      audio.muted = false;
+      audio.play();
+      button.textContent = "Pause Music 🔇";
+    } else {
+      audio.pause();
+      button.textContent = "Play Music 🎵";
+    }
+  }
+</script>
 </body>
 </html>
