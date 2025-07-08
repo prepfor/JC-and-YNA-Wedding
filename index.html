@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JC & Yna's Wedding</title>
   <style>
+    .play-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  background-color: #b0e0e6;
+  color: #241c1a;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1001;
+}
+.play-btn:hover {
+  background-color: #a0d0d6;
+}
     :root {
       --pantone-652: #6d87a8;
       --black: #241c1a;
@@ -142,10 +159,10 @@
     <source src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/wedding-music.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
-
-  <!-- 🔊 Button to Play Music -->
-  <button class="play-btn" onclick="unmuteMusic()">🎵 Click to Play Music</button>
-
+  
+  <!-- 🔊 Toggle Play/Pause Button -->
+<button class="play-btn" id="music-toggle" onclick="toggleMusic()">Play Music 🎵</button>
+  
   <!-- Meet the Couple Section -->
 <section id="couple" style="background-color: var(--beige); color: var(--black); text-align: center;">
   <h2>Meet the Couple</h2>
@@ -230,14 +247,20 @@
 
   <!-- ✅ Script to unmute on click -->
   <script>
-    window.addEventListener('click', function () {
-      const audio = document.getElementById('bg-music');
+  function toggleMusic() {
+    const audio = document.getElementById('bg-music');
+    const button = document.getElementById('music-toggle');
+
+    if (audio.paused || audio.muted) {
       audio.muted = false;
-      audio.play().catch(e => {
-        console.log('Audio playback failed:', e);
-      });
-    }, { once: true });
-  </script>
+      audio.play();
+      button.textContent = "Pause Music 🔇";
+    } else {
+      audio.pause();
+      button.textContent = "Play Music 🎵";
+    }
+  }
+</script>
 </body>
 </html>
 
