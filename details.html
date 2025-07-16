@@ -4,22 +4,54 @@
   <meta charset="UTF-8">
   <title>Wedding Details</title>
   <style>
+    :root {
+      --black: #241c1a;
+      --light-pink: #ffe4e6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       font-size: 18px;
       margin: 0;
       padding: 2rem;
-      color: #241c1a;
+      color: var(--black);
       background: linear-gradient(to bottom, #f9c5bd, #f8b195, #f67280, #c06c84);
       background-attachment: fixed;
       min-height: 100vh;
     }
 
+    nav {
+      background-color: rgba(244, 223, 202, 0.95);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 1.5rem;
+      color: var(--black);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     section {
       max-width: 800px;
-      margin: auto;
-      background: #ffe4e6; /* 🌸 Light Pink */
-      padding: 2rem;
+      margin: 4rem auto;
+      background: var(--light-pink); /* 🌸 Light Pink */
+      padding: 2.5rem;
       border-radius: 16px;
       box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
     }
@@ -43,29 +75,39 @@
   </style>
 </head>
 <body>
+
+  <nav>
+    <a href="index.html">Welcome</a>
+    <a href="meet.html">Meet the Couple</a>
+    <a href="details.html">Wedding Details</a>
+    <a href="palette.html">Color Palette</a>
+    <a href="weddingroles.html">Wedding Roles</a>
+    <a href="rsvp.html">RSVP</a>
+  </nav>
+
   <section>
-  <h2>Wedding Details</h2>
-  <p><strong>📅 Save the Date:</strong> November 2026 (Tentative)</p>
-  <p><strong>📍 Where It’s All Happening:</strong> Haya Nature Resort, Botolan Zambales</p>
-  <p><strong>🎨 Theme:</strong> Sunset Beach Wedding</p>
+    <h2>Wedding Details</h2>
+    <p><strong>📅 Save the Date:</strong> November 2026 (Tentative)</p>
+    <p><strong>📍 Where It’s All Happening:</strong> Haya Nature Resort, Botolan Zambales</p>
+    <p><strong>🎨 Theme:</strong> Sunset Beach Wedding</p>
 
-  <p>
-    We're saying "I do" with sand between our toes and love in the air! 🌊✨<br>
-    Imagine the golden hour glow, gentle sea breeze, and a dreamy sunset wrapping us all in magic.
-  </p>
+    <p>
+      We're saying "I do" with sand between our toes and love in the air! 🌊✨<br>
+      Imagine the golden hour glow, gentle sea breeze, and a dreamy sunset wrapping us all in magic.
+    </p>
 
-  <p>
-    Expect an intimate, joy-filled day full of nature, laughter, and barefoot dancing. Yes, *barefoot* — heels are optional but happiness is required!
-  </p>
+    <p>
+      Expect an intimate, joy-filled day full of nature, laughter, and barefoot dancing. Yes, *barefoot* — heels are optional but happiness is required!
+    </p>
 
-  <p>
-    <strong>What to Wear:</strong><br>
-    Light, flowy outfits are your best bet — think dresses, skirts, dress shorts, guayabera shirts, and comfy sandals or flip-flops. Stay cool, feel cute, and bring your smiles 🌴💃🕺
-  </p>
+    <p>
+      <strong>What to Wear:</strong><br>
+      Light, flowy outfits are your best bet — think dresses, skirts, dress shorts, guayabera shirts, and comfy sandals or flip-flops. Stay cool, feel cute, and bring your smiles 🌴💃🕺
+    </p>
 
-  <p>
-    More details on accommodations and travel tips are coming soon — we can’t wait to celebrate with you!
-  </p>
-</section>
+    <p>
+      More details on accommodations and travel tips are coming soon — we can’t wait to celebrate with you!
+    </p>
+  </section>
 </body>
 </html>
