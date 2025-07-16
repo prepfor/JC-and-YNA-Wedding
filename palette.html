@@ -25,11 +25,19 @@
       margin-bottom: 2rem;
     }
 
+    h3 {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 1.3rem;
+      color: #5a2a27;
+    }
+
     .palette {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
     }
 
     .color {
@@ -53,18 +61,20 @@
 <body>
   <h2>Wedding Color Palette</h2>
   <p class="description">
-    Our sunset-inspired palette is divided for attire suggestions:<br>
-    <strong>Male</strong> – Tierra Cotta, Apricot, Orange Spice<br>
-    <strong>Female</strong> – Tawny, Antique Mauve, Dark Lavender
+    Our sunset-inspired palette is divided for attire suggestions:
   </p>
 
+  <!-- Male Palette -->
+  <h3>Male</h3>
   <div class="palette">
-    <!-- Male Colors -->
     <div class="color" style="background-color: #985245;">Tierra<br>Cotta</div>
     <div class="color" style="background-color: #df6c49;">Apricot</div>
     <div class="color" style="background-color: #e78d5b;">Orange<br>Spice</div>
+  </div>
 
-    <!-- Female Colors -->
+  <!-- Female Palette -->
+  <h3>Female</h3>
+  <div class="palette">
     <div class="color light" style="background-color: #eed2b9;">Tawny</div>
     <div class="color" style="background-color: #c49ea9;">Antique<br>Mauve</div>
     <div class="color" style="background-color: #9583b4;">Dark<br>Lavender</div>
