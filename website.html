@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RSVP</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4dfca;
+      padding: 2rem;
+      color: #241c1a;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 16px rgba(0,0,0,0.1);
+    }
+    h2 { text-align: center; margin-bottom: 1.5rem; }
+    label { display: block; margin-top: 1rem; }
+    input, select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #6d87a8;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    p { text-align: center; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <form action="https://formspree.io/f/mjkrqelw" method="POST">
+    <h2>RSVP</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="attending">Will you be attending?</label>
+    <select id="attending" name="attending" required>
+      <option value="">Select one</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+      <option value="Maybe">Maybe</option>
+    </select>
+
+    <button type="submit">Submit RSVP</button>
+
+    <p>Or email us at: <a href="mailto:ynaprep4wedding@gmail.com">ynaprep4wedding@gmail.com</a></p>
+  </form>
+</body>
+</html>
