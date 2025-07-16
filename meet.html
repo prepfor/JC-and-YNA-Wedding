@@ -4,39 +4,72 @@
   <meta charset="UTF-8" />
   <title>Meet the Couple</title>
   <style>
+    :root {
+      --black: #241c1a;
+      --beige: #f4dfca;
+      --pink-gradient: linear-gradient(to bottom, #f9c5bd, #f8b195, #f67280, #c06c84);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f4dfca;
-      color: #241c1a;
-      padding: 2rem;
+      background: var(--pink-gradient);
+      background-attachment: fixed;
+      min-height: 100vh;
+      color: var(--black);
     }
+
     nav {
-      background-color: #f8b195;
+      background-color: rgba(244, 223, 202, 0.95);
       padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       text-align: center;
     }
+
     nav a {
       margin: 0 1.5rem;
-      color: #241c1a;
+      color: var(--black);
       text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
     section {
+      background-color: var(--beige);
       max-width: 800px;
-      margin: 2rem auto;
-      background: white;
-      border-radius: 12px;
+      margin: 4rem auto;
+      padding: 2.5rem;
+      border-radius: 16px;
       box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
-      padding: 2rem;
       text-align: center;
     }
-    img {
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    section img {
       max-width: 100%;
       border-radius: 12px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    section p {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -53,7 +86,7 @@
   <section>
     <h2>Meet the Couple</h2>
     <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/134101849_167962718417479_8969322493001541384_n.jpg" alt="JC and Yna">
-    <p style="margin-top: 1.5rem; font-size: 1.1rem;">
+    <p>
       JC & Yna are thrilled to celebrate their love story with the people who matter most.<br>
       Thank you for being part of our journey.
     </p>
