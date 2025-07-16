@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RSVP</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 18px;
+      margin: 0;
+      padding: 2rem;
+      color: #241c1a;
+      background: linear-gradient(to bottom, #f9c5bd, #f8b195, #f67280, #c06c84);
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
+
+    section {
+      max-width: 800px;
+      margin: auto;
+      background: #ffe4e6; /* Light pink bubble background */
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      color: #5a2a27;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-size: 1.05rem;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      background-color: #f8b195;
+      color: #241c1a;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.05rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #f67280;
+      color: white;
+    }
+
+    strong {
+      color: #8b3e2d;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h2>RSVP</h2>
+    <p><strong>We’d love to celebrate with you!</strong></p>
+    <p>Please let us know if you can join us for our special day.</p>
+
+    <!-- RSVP Form -->
+    <form action="https://formspree.io/f/mjkrqelw" method="POST">
+  <div style="margin-bottom: 1.2rem;">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+
+  <div style="margin-bottom: 1.2rem;">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div style="margin-bottom: 1.2rem;">
+    <label for="attending">Will you be attending?</label>
+    <select id="attending" name="attending" required>
+      <option value="">Select one</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+      <option value="Maybe">Maybe</option>
+    </select>
+  </div>
+
+  <div style="text-align: center; margin-top: 1.5rem;">
+    <button type="submit">Submit RSVP</button>
+  </div>
+</form>
+
+    <p style="margin-top: 2rem;">
+      You can also reach us at<br>
+      <a href="mailto:ynaprep4wedding@gmail.com">ynaprep4wedding@gmail.com</a>
+    </p>
+  </section>
+</body>
+</html>
