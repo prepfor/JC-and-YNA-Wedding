@@ -5,7 +5,7 @@
   <title>Wedding Color Palette</title>
   <style>
     body {
-       font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 2rem;
       color: #241c1a;
@@ -13,16 +13,25 @@
       background-attachment: fixed;
       min-height: 100vh;
     }
+
     h2 {
       text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    p.description {
+      text-align: center;
+      font-size: 1.1rem;
       margin-bottom: 2rem;
     }
+
     .palette {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
     }
+
     .color {
       width: 100px;
       height: 100px;
@@ -31,19 +40,34 @@
       align-items: center;
       justify-content: center;
       font-weight: bold;
+      color: white;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .color.light {
+      color: #241c1a;
     }
   </style>
 </head>
 <body>
   <h2>Wedding Color Palette</h2>
+  <p class="description">
+    Our sunset-inspired palette is divided for attire suggestions:<br>
+    <strong>Males</strong> – Tierra Cotta, Apricot, Orange Spice<br>
+    <strong>Females</strong> – Tawny, Antique Mauve, Dark Lavender
+  </p>
+
   <div class="palette">
-    <div class="color" style="background-color: #985245;">Tierra Cotta</div>
+    <!-- Male Colors -->
+    <div class="color" style="background-color: #985245;">Tierra<br>Cotta</div>
     <div class="color" style="background-color: #df6c49;">Apricot</div>
-    <div class="color" style="background-color: #e78d5b;">Orange Spice</div>
-    <div class="color" style="background-color: #eed2b9; color: #241c1a;">Tawny</div>
-    <div class="color" style="background-color: #c49ea9;">Antique Mauve</div>
-    <div class="color" style="background-color: #9583b4;">Dark Lavender</div>
+    <div class="color" style="background-color: #e78d5b;">Orange<br>Spice</div>
+
+    <!-- Female Colors -->
+    <div class="color light" style="background-color: #eed2b9;">Tawny</div>
+    <div class="color" style="background-color: #c49ea9;">Antique<br>Mauve</div>
+    <div class="color" style="background-color: #9583b4;">Dark<br>Lavender</div>
   </div>
 </body>
 </html>
