@@ -6,8 +6,7 @@
   <style>
     :root {
       --black: #241c1a;
-      --beige: #f4dfca;
-      --pink-gradient: linear-gradient(to bottom, #f9c5bd, #f8b195, #f67280, #c06c84);
+      --light-pink: #fce4e4;
     }
 
     * {
@@ -18,10 +17,13 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: var(--pink-gradient);
+      font-size: 18px;
+      margin: 0;
+      padding: 2rem;
+      color: var(--black);
+      background: linear-gradient(to bottom, #f9c5bd, #f8b195, #f67280, #c06c84);
       background-attachment: fixed;
       min-height: 100vh;
-      color: var(--black);
     }
 
     nav {
@@ -46,7 +48,7 @@
     }
 
     section {
-      background-color: var(--beige);
+      background-color: var(--light-pink);
       max-width: 800px;
       margin: 4rem auto;
       padding: 2.5rem;
@@ -60,16 +62,16 @@
       margin-bottom: 1.5rem;
     }
 
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
     section img {
       max-width: 100%;
       border-radius: 12px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-    }
-
-    section p {
-      margin-top: 1.5rem;
-      font-size: 1.1rem;
-      line-height: 1.6;
+      margin-top: 1rem;
     }
   </style>
 </head>
