@@ -8,27 +8,38 @@
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 2rem;
-      color: #241c1a;
       background: linear-gradient(to bottom, #f9c5bd, #f8b195, #f67280, #c06c84);
       background-attachment: fixed;
       min-height: 100vh;
+      color: #241c1a;
     }
 
     h2 {
       text-align: center;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
-    h3 {
-      margin-top: 2rem;
-      font-size: 1.2rem;
+    .role-box {
+      background-color: #f4dfca;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin: 1.5rem auto;
+      max-width: 800px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .role-box h3 {
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+      text-align: center;
+      font-size: 1.3rem;
       color: #5a2a27;
     }
 
     .flex-pair {
       display: flex;
       justify-content: space-between;
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
     .column {
@@ -37,40 +48,45 @@
 
     .column p {
       margin: 0.3rem 0;
+      text-align: center;
     }
 
     ul {
       list-style: none;
       padding-left: 0;
+      margin: 0;
+      text-align: center;
     }
 
     li {
       margin: 0.3rem 0;
     }
 
-    .section {
-      margin-top: 2rem;
+    p {
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h2>Guest List</h2>
+  <h2>Wedding Roles</h2>
 
   <!-- Parents -->
-  <div class="flex-pair section">
-    <div class="column">
-      <h3>Parents of the Groom</h3>
-      <p>Mrs. Joan Belizario</p>
-    </div>
-    <div class="column" style="text-align: right;">
-      <h3>Parents of the Bride</h3>
-      <p>Mrs. Gracelyn Tena</p>
-      <p>Mr. Arnel Tena</p>
+  <div class="role-box">
+    <div class="flex-pair">
+      <div class="column">
+        <h3>Parents of the Groom</h3>
+        <p>Mrs. Joan Belizario</p>
+      </div>
+      <div class="column">
+        <h3>Parents of the Bride</h3>
+        <p>Mrs. Gracelyn Tena</p>
+        <p>Mr. Arnel Tena</p>
+      </div>
     </div>
   </div>
 
-  <!-- Principal Sponsors -->
-  <div class="section">
+  <!-- Sponsors -->
+  <div class="role-box">
     <h3>Principal Sponsors</h3>
     <ul>
       <li>Mrs. Eleodora Gadin</li>
@@ -81,11 +97,11 @@
   </div>
 
   <!-- Best Man and Maids of Honor -->
-  <div class="section">
+  <div class="role-box">
     <h3>Best Man</h3>
     <p>Mr. Jasper Durias</p>
 
-    <h3>Maids of Honor</h3>
+    <h3 style="margin-top: 1.5rem;">Maids of Honor</h3>
     <ul>
       <li>Ms. Jade Ellaine Gadin</li>
       <li>Ms. Camille Ayra Bunda</li>
@@ -93,8 +109,8 @@
   </div>
 
   <!-- Groomsmen & Bridesmaids -->
-  <div class="section">
-    <h3 style="text-align: center;">Groomsmen &amp; Bridesmaids</h3>
+  <div class="role-box">
+    <h3>Groomsmen &amp; Bridesmaids</h3>
     <div class="flex-pair">
       <div class="column">
         <p>Tom Zwart</p>
@@ -104,7 +120,7 @@
         <p>Ric Howard Araneta</p>
         <p>Ryan Victor Esperanza</p>
       </div>
-      <div class="column" style="text-align: right;">
+      <div class="column">
         <p>Jonah Micah Zwart</p>
         <p>Queen Ester Belizario</p>
         <p>Ira Mariz Alviar</p>
@@ -115,7 +131,7 @@
   </div>
 
   <!-- Flower Girl -->
-  <div class="section">
+  <div class="role-box">
     <h3>Flower Girl</h3>
     <p>Alynna Fae Tena</p>
   </div>
