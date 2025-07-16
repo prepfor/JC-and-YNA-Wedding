@@ -81,11 +81,10 @@
 </head>
 <body>
   <nav>
-  <a href="#" onclick="loadPage('home.html')">Home</a>
-  <a href="#" onclick="loadPage('details.html')">Wedding Details</a>
-  <a href="#" onclick="loadPage('palette.html')">Color Palette</a>
-  <a href="#" onclick="loadPage('weddingroles.html')">Wedding Roles</a>
-  <a href="#" onclick="loadPage('rsvp.html')">RSVP</a>
+  <a href="details.html">Wedding Details</a>
+  <a href="palette.html">Color Palette</a>
+  <a href="weddingroles.html">Wedding Roles</a>
+  <a href="rsvp.html">RSVP</a>
   </nav>
 
   <!-- ✅ Background Music -->
@@ -100,7 +99,7 @@
   <div class="hero">
     <h1>Welcome to Our Wedding</h1>
     <p>JC & Yna are getting married — and you're invited!</p>
-    <div id="content"></div>
+  </div>
 
   <section style="background-color: var(--beige); text-align: center;">
     <h2>Meet the Couple</h2>
@@ -131,19 +130,5 @@
       button.textContent = "Play Music 🎵";
     }
   }
-
-  function loadPage(page) {
-    fetch(`partials/${page}`)
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('content').innerHTML = html;
-        window.scrollTo(0, 0); // scroll to top on load
-      });
-  }
-
-  // Load home section by default on first visit
-  window.addEventListener('DOMContentLoaded', () => {
-    loadPage('home.html');
-  });
 </script>
 </html>
