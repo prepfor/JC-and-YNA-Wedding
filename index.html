@@ -86,6 +86,15 @@
     <a href="palette.html" target="_blank">Color Palette</a>
   </nav>
 
+  <!-- ✅ Background Music -->
+<audio id="bg-music" autoplay loop muted>
+  <source src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/cant-help-falling-in-love.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- 🔊 Play/Pause Button -->
+<button class="play-btn" id="music-toggle" onclick="toggleMusic()">Play Music 🎵</button>
+  
   <div class="hero">
     <h1>Welcome to Our Wedding</h1>
     <p>JC & Yna are getting married — and you're invited!</p>
@@ -106,4 +115,19 @@
     <p>&copy; 2025 JC & Yna. All rights reserved.</p>
   </footer>
 </body>
+  <script>
+  function toggleMusic() {
+    const audio = document.getElementById('bg-music');
+    const button = document.getElementById('music-toggle');
+
+    if (audio.paused || audio.muted) {
+      audio.muted = false;
+      audio.play();
+      button.textContent = "Pause Music 🔇";
+    } else {
+      audio.pause();
+      button.textContent = "Play Music 🎵";
+    }
+  }
+</script>
 </html>
