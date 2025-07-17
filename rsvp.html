@@ -27,12 +27,13 @@
     }
 
     nav {
-      background-color: rgba(244, 223, 202, 0.95);
+      background-color: var(--light-pink);
       padding: 1rem 2rem;
       position: sticky;
       top: 0;
       z-index: 1000;
       text-align: center;
+      border-bottom: 2px solid #f8b195;
     }
 
     nav a {
@@ -108,6 +109,17 @@
   </style>
 </head>
 <body>
+
+  <!-- 🌸 Light Pink Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="meet.html">Meet the Couple</a>
+    <a href="details.html">Wedding Details</a>
+    <a href="palette.html">Color Palette</a>
+    <a href="weddingroles.html">Wedding Roles</a>
+    <a href="rsvp.html">RSVP</a>
+  </nav>
+
   <section>
     <h2>RSVP</h2>
     <p><strong>We’d love to celebrate with you!</strong></p>
@@ -115,30 +127,30 @@
 
     <!-- RSVP Form -->
     <form action="https://formspree.io/f/mjkrqelw" method="POST">
-  <div style="margin-bottom: 1.2rem;">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-  </div>
+      <div style="margin-bottom: 1.2rem;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
 
-  <div style="margin-bottom: 1.2rem;">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-  </div>
+      <div style="margin-bottom: 1.2rem;">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
 
-  <div style="margin-bottom: 1.2rem;">
-    <label for="attending">Will you be attending?</label>
-    <select id="attending" name="attending" required>
-      <option value="">Select one</option>
-      <option value="Yes">Yes</option>
-      <option value="No">No</option>
-      <option value="Maybe">Maybe</option>
-    </select>
-  </div>
+      <div style="margin-bottom: 1.2rem;">
+        <label for="attending">Will you be attending?</label>
+        <select id="attending" name="attending" required>
+          <option value="">Select one</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="Maybe">Maybe</option>
+        </select>
+      </div>
 
-  <div style="text-align: center; margin-top: 1.5rem;">
-    <button type="submit">Submit RSVP</button>
-  </div>
-</form>
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <button type="submit">Submit RSVP</button>
+      </div>
+    </form>
 
     <p style="margin-top: 2rem;">
       You can also reach us at<br>
