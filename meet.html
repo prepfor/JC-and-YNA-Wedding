@@ -22,17 +22,18 @@
 
 .collage .main-photo img {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px; /* ⬆️ Increased from 500px */
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   margin-bottom: 1.5rem;
 }
 
-.collage .row-photos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+.collage .row-photos img {
+  width: 180px;   /* ⬆️ Increased from 160px */
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
 
 .collage .row-photos img {
