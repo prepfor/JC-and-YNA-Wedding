@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Wedding Roles</title>
   <style>
-     :root {
+    :root {
       --black: #241c1a;
       --light-pink: #ffe4e6;
     }
@@ -27,12 +27,13 @@
     }
 
     nav {
-      background-color: rgba(244, 223, 202, 0.95);
+      background-color: var(--light-pink);
       padding: 1rem 2rem;
       position: sticky;
       top: 0;
       z-index: 1000;
       text-align: center;
+      border-bottom: 2px solid #f8b195;
     }
 
     nav a {
@@ -47,23 +48,15 @@
       text-decoration: underline;
     }
 
-    section {
-      max-width: 800px;
-      margin: 4rem auto;
-      background: var(--light-pink); /* 🌸 Light Pink */
-      padding: 2.5rem;
-      border-radius: 16px;
-      box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
-    }
-
     h2 {
       text-align: center;
-      margin-bottom: 2rem;
+      margin: 4rem auto 2rem;
       font-size: 2.2rem;
+      color: #5a2a27;
     }
 
     .role-box {
-      background-color: #f4dfca;
+      background-color: var(--light-pink);
       border-radius: 16px;
       padding: 2rem;
       margin: 2rem auto;
@@ -114,6 +107,17 @@
   </style>
 </head>
 <body>
+
+  <!-- 🌸 Light Pink Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="meet.html">Meet the Couple</a>
+    <a href="details.html">Wedding Details</a>
+    <a href="palette.html">Color Palette</a>
+    <a href="weddingroles.html">Wedding Roles</a>
+    <a href="rsvp.html">RSVP</a>
+  </nav>
+
   <h2>Wedding Roles</h2>
 
   <!-- Parents -->
@@ -172,6 +176,7 @@
         <p>Ira Mariz Alviar</p>
         <p>Kate Esperanza</p>
         <p>Cheska Mae Esperanza</p>
+        <p>Justin Pantoja Gomez</p>
       </div>
     </div>
   </div>
@@ -187,5 +192,6 @@
     <h3>Dog of Honor</h3>
     <p>Copper & Maven 🐶🐾</p>
   </div>
+
 </body>
 </html>
