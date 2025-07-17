@@ -8,13 +8,11 @@
     :root {
       --pantone-652: #6d87a8;
       --black: #241c1a;
-      --brown: #65503f;
-      --beige: #f4dfca;
-      --powder-blue: #b0e0e6;
-      --desaturated-blue: #7ca8b8;
-      --shadow-blue: #778ba5;
+      --light-pink: #ffe4e6;
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background: url('https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/beach-wedding-setup-stockcake.jpg') no-repeat center center fixed;
@@ -22,8 +20,9 @@
       color: var(--black);
       scroll-behavior: smooth;
     }
+
     nav {
-      background-color: rgba(244, 223, 202, 0.95);
+      background-color: var(--light-pink);
       padding: 1rem 2rem;
       position: sticky;
       top: 0;
@@ -31,14 +30,19 @@
       display: flex;
       justify-content: center;
       font-size: 0.9rem;
+      border-bottom: 2px solid #f8b195;
     }
+
     nav a {
       margin: 0 1.5rem;
       color: var(--black);
       text-decoration: none;
-      font-weight: 500;
+      font-weight: bold;
     }
-    nav a:hover { text-decoration: underline; }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
 
     .hero {
       background: url('https://images.unsplash.com/photo-1525393839363-81a6e84dfc32?fit=crop&w=1400&q=80') no-repeat center center/cover;
@@ -51,8 +55,15 @@
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
       text-align: center;
     }
-    .hero h1 { font-size: 4rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.2rem; }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
 
     section {
       padding: 4rem 2rem;
@@ -77,27 +88,48 @@
       color: #241c1a;
       margin-top: 4rem;
     }
+
+    .play-btn {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background-color: var(--light-pink);
+      color: #241c1a;
+      border: none;
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .play-btn:hover {
+      background-color: #f8b195;
+      color: white;
+    }
   </style>
 </head>
 <body>
+
   <nav>
-  <a href="index.html">Home</a>
-  <a href="meet.html">Meet the Couple</a>
-  <a href="details.html">Wedding Details</a>
-  <a href="palette.html">Color Palette</a>
-  <a href="weddingroles.html">Wedding Roles</a>
-  <a href="rsvp.html">RSVP</a>
+    <a href="index.html">Home</a>
+    <a href="meet.html">Meet the Couple</a>
+    <a href="details.html">Wedding Details</a>
+    <a href="palette.html">Color Palette</a>
+    <a href="weddingroles.html">Wedding Roles</a>
+    <a href="rsvp.html">RSVP</a>
   </nav>
 
   <!-- ✅ Background Music -->
-<audio id="bg-music" autoplay loop muted>
-  <source src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/cant-help-falling-in-love.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+  <audio id="bg-music" autoplay loop muted>
+    <source src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/cant-help-falling-in-love.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-<!-- 🔊 Play/Pause Button -->
-<button class="play-btn" id="music-toggle" onclick="toggleMusic()">Play Music 🎵</button>
-  
+  <!-- 🔊 Play/Pause Button -->
+  <button class="play-btn" id="music-toggle" onclick="toggleMusic()">Play Music 🎵</button>
+
   <div class="hero">
     <h1>Welcome to Our Wedding</h1>
     <p>JC & Yna are getting married — and you're invited!</p>
@@ -106,20 +138,21 @@
   <footer>
     <p>&copy; 2025 JC & Yna. All rights reserved.</p>
   </footer>
-</body>
-  <script>
-  function toggleMusic() {
-    const audio = document.getElementById('bg-music');
-    const button = document.getElementById('music-toggle');
 
-    if (audio.paused || audio.muted) {
-      audio.muted = false;
-      audio.play();
-      button.textContent = "Pause Music 🔇";
-    } else {
-      audio.pause();
-      button.textContent = "Play Music 🎵";
+  <script>
+    function toggleMusic() {
+      const audio = document.getElementById('bg-music');
+      const button = document.getElementById('music-toggle');
+
+      if (audio.paused || audio.muted) {
+        audio.muted = false;
+        audio.play();
+        button.textContent = "Pause Music 🔇";
+      } else {
+        audio.pause();
+        button.textContent = "Play Music 🎵";
+      }
     }
-  }
-</script>
+  </script>
+</body>
 </html>
