@@ -14,7 +14,34 @@
       margin: 0;
       padding: 0;
     }
+    
+.collage {
+  margin-top: 2rem;
+  text-align: center;
+}
 
+.collage .main-photo img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin-bottom: 1.5rem;
+}
+
+.collage .row-photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.collage .row-photos img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
     body {
       font-family: 'Segoe UI', sans-serif;
       font-size: 18px;
@@ -90,12 +117,20 @@
   </nav>
 
   <section>
-    <h2>Meet the Couple</h2>
-    <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/134101849_167962718417479_8969322493001541384_n.jpg" alt="JC and Yna">
-    <p>
-      JC & Yna are thrilled to celebrate their love story with the people who matter most.<br>
-      Thank you for being part of our journey.
-    </p>
-  </section>
+  <h2>Meet the Couple</h2>
+  <p>JC & Yna through the years 💕</p>
+
+  <div class="collage">
+    <div class="main-photo">
+      <img src="https://raw.githubusercontent.com//JC-and-YNA-Wedding/blob/main/night-life.jpg" alt="Main Couple Photo">
+    </div>
+    <div class="row-photos">
+      <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/college-days.jpg" alt="Memory 1">
+      <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/grad-pic.jpg" alt="Memory 2">
+      <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/134101849_167962718417479_8969322493001541384_n.jpg" alt="Memory 3">
+      <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/thailand.jpg" alt="Memory 4">
+    </div>
+  </div>
+</section>
 </body>
 </html>
