@@ -6,7 +6,7 @@
   <style>
     :root {
       --black: #140c1c;
-  --light-pink: #f9aAAD;
+      --light-pink: #f9aAAD;
     }
 
     * {
@@ -15,10 +15,14 @@
       padding: 0;
     }
 
+    html, body {
+      height: 100%;
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       font-size: 18px;
-      margin: 0;
       color: var(--black);
       background: linear-gradient(to bottom, #681a46, #c15776, #f9aAAD);
       background-attachment: fixed;
@@ -26,7 +30,7 @@
     }
 
     nav {
-      background-color: var(--light-pink); /* 🎯 Make sure it's light pink */
+      background-color: var(--light-pink);
       padding: 1rem 2rem;
       position: sticky;
       top: 0;
@@ -76,7 +80,7 @@
 </head>
 <body>
 
-  <!-- ✅ Light Pink Sticky Navigation Bar at Top -->
+  <!-- ✅ Unified Light Pink Sticky Navigation Bar -->
   <nav>
     <a href="index.html">Home</a>
     <a href="meet.html">Meet the Couple</a>
@@ -86,6 +90,7 @@
     <a href="rsvp.html">RSVP</a>
   </nav>
 
+  <!-- 🌸 Matching Content Bubble -->
   <section>
     <h2>Wedding Details</h2>
     <p><strong>📅 Save the Date:</strong> November 2026 (Tentative)</p>
