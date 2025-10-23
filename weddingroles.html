@@ -6,7 +6,7 @@
   <style>
     :root {
       --black: #140c1c;
-  --light-pink: #f9aAAD;
+      --light-pink: #f9aAAD;
     }
 
     * {
@@ -16,24 +16,25 @@
     }
 
     body {
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 18px;
-  margin: 0;
-  color: var(--black);
-  background: linear-gradient(to bottom, #681a46, #c15776, #f9aAAD);
-  background-attachment: fixed;
-  min-height: 100vh;
-}
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 18px;
+      margin: 0;
+      color: var(--black);
+      background: linear-gradient(to bottom right, #f7e7ce, #c76d7a); /* ✨ Champagne → Soft Burgundy */
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
 
-nav {
-  background-color: var(--light-pink);
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  text-align: center;
-  border-bottom: 2px solid #f8b195;
-}
+    /* 🌸 Light Pink Sticky Navigation */
+    nav {
+      background-color: var(--light-pink);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+      border-bottom: 2px solid #f8b195;
+    }
 
     nav a {
       margin: 0 1.5rem;
@@ -47,6 +48,7 @@ nav {
       text-decoration: underline;
     }
 
+    /* 💍 Section Titles */
     h2 {
       text-align: center;
       margin: 4rem auto 2rem;
@@ -54,6 +56,7 @@ nav {
       color: #5a2a27;
     }
 
+    /* 💌 Role Boxes */
     .role-box {
       background-color: var(--light-pink);
       border-radius: 16px;
@@ -75,6 +78,7 @@ nav {
       display: flex;
       justify-content: space-between;
       gap: 1.5rem;
+      flex-wrap: wrap;
     }
 
     .column {
@@ -82,13 +86,13 @@ nav {
     }
 
     .column p,
-.role-box p,
-.role-box li {
-  margin: 0.4rem 0;
-  text-align: center;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
+    .role-box p,
+    .role-box li {
+      margin: 0.4rem 0;
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
 
     ul {
       list-style: none;
