@@ -6,7 +6,7 @@
   <style>
     :root {
       --black: #140c1c;
-  --light-pink: #f9aAAD;
+      --light-pink: #f9aAAD;
     }
 
     * {
@@ -16,24 +16,24 @@
     }
 
     body {
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 18px;
-  margin: 0;
-  color: var(--black);
-  background: linear-gradient(to bottom, #681a46, #c15776, #f9aAAD);
-  background-attachment: fixed;
-  min-height: 100vh;
-  }
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 18px;
+      color: var(--black);
+      background: linear-gradient(to bottom, #681a46, #c15776, #f9aAAD);
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
 
+    /* 🌸 Navigation Bar */
     nav {
-  background-color: var(--light-pink);
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  text-align: center;
-  border-bottom: 2px solid #f8b195;
-}
+      background-color: var(--light-pink);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+      border-bottom: 2px solid #f8b195;
+    }
 
     nav a {
       margin: 0 1.5rem;
@@ -47,11 +47,12 @@
       text-decoration: underline;
     }
 
+    /* 🌸 RSVP Bubble */
     section {
       max-width: 800px;
       margin: 4rem auto;
-      background: var(--light-pink); /* 🌸 Light Pink */
-      padding: 2.5rem;
+      background: var(--light-pink);
+      padding: 3rem;
       border-radius: 16px;
       box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
     }
@@ -70,41 +71,59 @@
       text-align: center;
     }
 
+    form {
+      margin-top: 2rem;
+    }
+
     label {
       display: block;
-      margin-top: 1rem;
       font-size: 1.05rem;
+      margin-top: 1rem;
+      color: #5a2a27;
     }
 
     input, select {
       width: 100%;
-      padding: 0.5rem;
+      padding: 0.6rem;
       margin-top: 0.5rem;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 6px;
       font-size: 1rem;
     }
 
     button {
-      margin-top: 1.5rem;
+      display: block;
+      margin: 2rem auto 0;
       background-color: #f8b195;
       color: #241c1a;
-      padding: 0.75rem 1.5rem;
+      padding: 0.8rem 2rem;
       border: none;
       border-radius: 8px;
       font-weight: bold;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       cursor: pointer;
+      transition: all 0.3s ease;
     }
 
     button:hover {
       background-color: #f67280;
       color: white;
+      transform: scale(1.05);
     }
 
     strong {
       color: #8b3e2d;
     }
+
+    a {
+      color: #8b3e2d;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 <body>
@@ -119,36 +138,28 @@
     <a href="rsvp.html">RSVP</a>
   </nav>
 
+  <!-- 🌸 RSVP Section -->
   <section>
     <h2>RSVP</h2>
     <p><strong>We’d love to celebrate with you!</strong></p>
     <p>Please let us know if you can join us for our special day.</p>
 
-    <!-- RSVP Form -->
     <form action="https://formspree.io/f/mjkrqelw" method="POST">
-      <div style="margin-bottom: 1.2rem;">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-      </div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
 
-      <div style="margin-bottom: 1.2rem;">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
-      <div style="margin-bottom: 1.2rem;">
-        <label for="attending">Will you be attending?</label>
-        <select id="attending" name="attending" required>
-          <option value="">Select one</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-          <option value="Maybe">Maybe</option>
-        </select>
-      </div>
+      <label for="attending">Will you be attending?</label>
+      <select id="attending" name="attending" required>
+        <option value="">Select one</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Maybe">Maybe</option>
+      </select>
 
-      <div style="text-align: center; margin-top: 1.5rem;">
-        <button type="submit">Submit RSVP</button>
-      </div>
+      <button type="submit">Submit RSVP</button>
     </form>
 
     <p style="margin-top: 2rem;">
@@ -158,3 +169,4 @@
   </section>
 </body>
 </html>
+
