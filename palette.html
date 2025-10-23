@@ -19,7 +19,7 @@
       font-family: 'Segoe UI', sans-serif;
       font-size: 18px;
       color: var(--black);
-      background: linear-gradient(to bottom, #681a46, #c15776, #f9aAAD);
+      background: linear-gradient(to bottom right, #f7e7ce, #c76d7a); /* ✨ Champagne → Soft Burgundy */
       background-attachment: fixed;
       min-height: 100vh;
       margin: 0;
@@ -96,15 +96,21 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       text-align: center;
       padding: 0.5rem;
+      transition: transform 0.3s ease;
     }
 
     .color.light {
       color: var(--black);
     }
+
+    .color:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
 
+  <!-- 💒 Navigation Bar -->
   <nav>
     <a href="index.html">Home</a>
     <a href="meet.html">Meet the Couple</a>
@@ -114,6 +120,7 @@
     <a href="rsvp.html">RSVP</a>
   </nav>
 
+  <!-- 🌸 Color Palette Section -->
   <section>
     <h2>Wedding Color Palette</h2>
     <p class="description">
@@ -136,8 +143,6 @@
       <div class="color light" style="background-color: #F5F5DC;">Beige</div>
       <div class="color light" style="background-color: #F9AABB;">Blush<br>Pink</div>
     </div>
-
   </section>
 </body>
 </html>
-
