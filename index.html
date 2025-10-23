@@ -24,14 +24,16 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: url('https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/watercolor-floral.jpg') no-repeat center center fixed;
-      background-size: cover;
       color: var(--black);
       scroll-behavior: smooth;
+      /* ✨ Gradient Champagne–Burgundy Background */
+      background: linear-gradient(to bottom right, #F7E7CE, #D17A8A, #B35868);
+      background-attachment: fixed;
+      min-height: 100vh;
     }
 
     nav {
-      background-color: var(--light-pink); /* 🌸 Light pink like other pages */
+      background-color: var(--light-pink);
       padding: 1rem 2rem;
       position: sticky;
       top: 0;
@@ -52,25 +54,27 @@
       text-decoration: underline;
     }
 
-    .hero-text {
-  background-color: rgba(0, 0, 0, 0.5); /* dark semi-transparent */
-  padding: 2rem;
-  border-radius: 12px;
-}
-    
+    /* 🌸 Hero Section with Soft Overlay */
     .hero {
-  background: linear-gradient(to bottom, rgba(104, 26, 70, 0.7), rgba(193, 87, 118, 0.7), rgba(249, 170, 173, 0.7)),
-            url('https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/watercolor-floral.jpg') 
-            no-repeat center center / cover;
-  height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: white;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-  text-align: center;
-}
+      background: 
+        linear-gradient(to bottom right, rgba(247, 231, 206, 0.8), rgba(209, 122, 138, 0.7), rgba(179, 88, 104, 0.7)),
+        url('https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/watercolor-floral.jpg') 
+        no-repeat center center / cover;
+      height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    .hero-text {
+      background-color: rgba(0, 0, 0, 0.4); /* Soft semi-transparent black */
+      padding: 2rem 3rem;
+      border-radius: 12px;
+    }
 
     .hero h1 {
       font-size: 4rem;
@@ -78,15 +82,15 @@
     }
 
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background: linear-gradient(to bottom, #681a46, #c15776, #f9aAAD);
+      background: linear-gradient(to bottom right, #F7E7CE, #D17A8A, #B35868);
       color: #241c1a;
-      margin-top: auto; /* 👈 Pushes footer to bottom */
+      margin-top: auto;
     }
 
     .play-btn {
@@ -112,6 +116,7 @@
 </head>
 <body>
 
+  <!-- 🌸 Navigation -->
   <nav>
     <a href="index.html">Home</a>
     <a href="meet.html">Meet the Couple</a>
@@ -121,7 +126,7 @@
     <a href="rsvp.html">RSVP</a>
   </nav>
 
-  <!-- ✅ Background Music -->
+  <!-- 🎵 Background Music -->
   <audio id="bg-music" autoplay loop muted>
     <source src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/cant-help-falling-in-love.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
@@ -130,13 +135,15 @@
   <!-- 🔊 Play/Pause Button -->
   <button class="play-btn" id="music-toggle" onclick="toggleMusic()">Play Music 🎵</button>
 
+  <!-- 💒 Hero Section -->
   <div class="hero">
-  <div class="hero-text">
-    <h1>Welcome to Our Wedding</h1>
-    <p>JC & Yna are getting married — and you're invited!</p>
+    <div class="hero-text">
+      <h1>Welcome to Our Wedding</h1>
+      <p>JC & Yna are getting married — and you're invited!</p>
+    </div>
   </div>
-</div>
 
+  <!-- 🌅 Footer -->
   <footer>
     <p>&copy; 2025 JC & Yna. All rights reserved.</p>
   </footer>
@@ -158,5 +165,3 @@
   </script>
 </body>
 </html>
-
-
