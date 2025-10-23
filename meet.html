@@ -6,7 +6,7 @@
   <style>
     :root {
       --black: #140c1c;
-  --light-pink: #f9aAAD;
+      --light-pink: #f9aAAD;
     }
 
     * {
@@ -14,39 +14,17 @@
       margin: 0;
       padding: 0;
     }
-    
-.collage {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.collage .main-photo img {
-  width: 100%;
-  max-width: 600px; /* ⬆️ Increased from 500px */
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  margin-bottom: 1.5rem;
-}
-
-.collage .row-photos img {
-  width: 180px;   /* ⬆️ Increased from 160px */
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-}
 
     body {
       font-family: 'Segoe UI', sans-serif;
       font-size: 18px;
-      margin: 0;
       color: var(--black);
-      background: linear-gradient(to bottom, #681a46, #c15776, #f9aAAD);
+      background: linear-gradient(to bottom right, #f7e7ce, #c76d7a); /* ✨ Champagne → Soft Burgundy */
       background-attachment: fixed;
       min-height: 100vh;
     }
 
-    /* 🌸 Light Pink Sticky Nav */
+    /* 🌸 Sticky Light Pink Navigation Bar */
     nav {
       background-color: var(--light-pink);
       padding: 1rem 2rem;
@@ -75,7 +53,7 @@
       margin: 4rem auto;
       padding: 2.5rem;
       border-radius: 16px;
-      box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
       text-align: center;
     }
 
@@ -90,17 +68,43 @@
       line-height: 1.6;
     }
 
-    section img {
-      max-width: 100%;
+    .collage {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .collage .main-photo img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1.5rem;
+    }
+
+    .collage .row-photos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .collage .row-photos img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
       border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-      margin-top: 1rem;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .collage .row-photos img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
 
-  <!-- ✅ Navigation Bar: Light Pink + Sticky on Top -->
+  <!-- ✅ Navigation Bar -->
   <nav>
     <a href="index.html">Home</a>
     <a href="meet.html">Meet the Couple</a>
@@ -111,22 +115,23 @@
   </nav>
 
   <section>
-  <h2>Meet the Couple</h2>
-  <p>JC & Yna through the years 💕</p>
+    <h2>Meet the Couple</h2>
+    <p>JC & Yna through the years 💕</p>
 
-  <div class="collage">
-    <div class="main-photo">
-      <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/night-life.jpg" alt="Main Couple Photo">
+    <div class="collage">
+      <div class="main-photo">
+        <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/night-life.jpg" alt="Main Couple Photo">
+      </div>
+      <div class="row-photos">
+        <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/college-days.jpg" alt="Memory 1">
+        <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/perps.jpeg" alt="Memory 2">
+        <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/grad-pic.jpg" alt="Memory 3">
+        <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/134101849_167962718417479_8969322493001541384_n.jpg" alt="Memory 4">
+        <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/siargao.jpg" alt="Memory 5">
+        <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/thailand.jpg" alt="Memory 6">
+      </div>
     </div>
-    <div class="row-photos">
-      <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/college-days.jpg" alt="Memory 1">
-      <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/perps.jpeg" alt="Memory 2">
-      <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/grad-pic.jpg" alt="Memory 3">
-      <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/134101849_167962718417479_8969322493001541384_n.jpg" alt="Memory 4">
-      <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/siargao.jpg" alt="Memory 5">
-      <img src="https://raw.githubusercontent.com/prepfor/JC-and-YNA-Wedding/main/thailand.jpg" alt="Memory 6">
-    </div>
-  </div>
-</section>
+  </section>
 </body>
 </html>
+
